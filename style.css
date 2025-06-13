@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background: linear-gradient(180deg, #0b0b0b 0%, #000000 50%, #111111 100%);
+    color: #fff;
+    
+}
+
+.navbar {
+    position: fixed;
+    bottom: 20px; /* CAMBIADO: De top a bottom */
+    left: 50%;
+    transform: translateX(-50%); /* NUEVO: Centrar horizontalmente */
+    width: auto; /* CAMBIADO: Ancho automático en lugar de 100% */
+    max-width: 600px; /* NUEVO: Ancho máximo más estrecho */
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 2rem; /* MODIFICADO: Más padding horizontal */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* CAMBIADO: Border completo */
+    border-radius: 50px; /* NUEVO: Bordes redondeados tipo píldora */
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: center; /* CAMBIADO: Centrar en lugar de space-between */
+    align-items: center;
+    /* REMOVIDO: max-width, margin y padding ya no son necesarios */
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem; /* REDUCIDO: De 2rem a 1rem para hacerla más compacta */
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem; /* REDUCIDO: De 1rem a 0.9rem */
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0.8rem; /* REDUCIDO: Menos padding horizontal */
+    white-space: nowrap; /* NUEVO: Evita que el texto se rompa */
+}
+
+.nav-link:hover {
+    color: #4ecdc4;
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4ecdc4, #45b7d1);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 6rem;
+    width: 100%;
+}
+
+.texto{
+    width: 40rem;
+}
+
+.texto h1{
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.texto p{
+    font-size: 1.3rem;
+}
+
+.image-container{
+            position: relative;
+            width: 400px;
+            height: 400px;
+            flex-shrink: 0;
+            cursor: pointer;
+            overflow: hidden; /* CLAVE: Evita que las imágenes se salgan */
+            border-radius: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .mug {
+            width: 100%; /* Se ajusta al ancho del contenedor */
+            height: 100%; /* Se ajusta al alto del contenedor */
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            object-fit: contain; /* Mantiene la proporción sin recortar */
+            transition: opacity 0.3s ease;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+.mug.active {
+    opacity: 1; /* ← CLAVE: Solo la clase 'active' es visible */
+}
