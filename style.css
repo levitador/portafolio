@@ -12,6 +12,7 @@ body{
     font-family:"Pixelify Sans", sans-serif;
     background: linear-gradient(180deg, #0b0b0b 0%, #000000 50%, #111111 100%);
     color: #fff;
+    overflow: hidden;
     
 }
 
@@ -142,16 +143,22 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
     height: 100vh;
     margin: 0 auto;
-    padding: 60px 20px;
     gap: 40px;
 }
 
+.text-left{
+    margin-right: 200px;
+}
+
+.text-left h1{
+    font-size: 2.7rem;
+    margin-bottom: 10px;
+}
 
 .text-left p{
-    width: 16rem;
+    width: 500px;
     font-size: 1.3rem;
     font-family: "Pixelify Sans";
     text-align: left;
@@ -164,16 +171,15 @@ body{
     text-align: right;
 }
 
-.img-center{
-    flex-shrink: 0;
+.panel{
+    height: 100%;
 }
 
-.img-center img {
-    width: 400px;
-    height: 400px;
+.panel img {
+    width: auto;
+    height: 100%;
     object-fit: cover;
     border-radius: 4px;
-    animation: float 3s ease-in-out infinite;
 }
 
 
@@ -214,6 +220,24 @@ body{
     transition: 0.5s;
 }
 
+.section {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+}
+
+.section.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    z-index: 1;
+}
+
 
 .textos{
     opacity: 0;
@@ -226,10 +250,11 @@ body{
 
 /*sitema solar*/
 #skills{
-    height: 110vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .sistema-solar {
@@ -372,8 +397,8 @@ body{
 
 /*CONTACTO*/
 
-#contac{
-    height: 110vh;
+#contact{
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
