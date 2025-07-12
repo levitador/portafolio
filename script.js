@@ -23,6 +23,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
             seccion.classList.remove('active');
         });
 
+        
         // Remover 'active' de todos los enlaces
         document.querySelectorAll('.nav-link').forEach(nav => {
             nav.classList.remove('active');
