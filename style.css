@@ -264,6 +264,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 /* El Sol - Círculo blanco central */
