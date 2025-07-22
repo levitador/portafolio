@@ -141,18 +141,28 @@
     <section id="contact" class="section">
 
 
-        <form>
-            <h1>contacteme</h1>
-            <label for="">NOMBRE</label>
-            <input type="text"class="NOMBRE">
-            <label for="">Gmail</label>
-            <input type="text"class="Gmail">
-            <label for="">mensaje</label>
-            <textarea class="mensaje"></textarea>
-            <button type="button" onclick="sendWhatsapp">ENVIAR A Whatsapp</button>
-            
-        </form>
+               <div class="cube">
+                 <div class="face front">
+                   <form>
+                     <h1>Contácteme</h1>
+                     <label for="nombre">Nombre</label>
+                     <input type="text" id="nombre" class="NOMBRE" />
+             
+                     <label for="correo">Gmail</label>
+                     <input type="email" id="correo" class="Gmail" />
+             
+                     <label for="mensaje">Mensaje</label>
+                     <textarea id="mensaje" class="mensaje"></textarea>
 
+                     <button type="button" onclick="sendWhatsapp()">Enviar a WhatsApp</button>
+                   </form>
+                 </div>
+                 <div class="face back"></div>
+                 <div class="face right"></div>
+                 <div class="face left"></div>
+                 <div class="face top"></div>
+                 <div class="face bottom"></div>
+               </div>
 
 
     </section>
