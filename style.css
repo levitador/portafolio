@@ -101,6 +101,11 @@ body{
     font-family: "Pixelify Sans";
 }
 
+.intermedio{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 .image-container{
             position: relative;
             width: 400px;
