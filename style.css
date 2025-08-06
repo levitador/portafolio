@@ -190,13 +190,13 @@ body{
     border-radius: 4px;
 }
 
-
 .section-content{
     width: 1200px;
     height: 100vh;
     align-items: center;
 }
 
+/*portafolio*/
 #proyectos{
     justify-content: center;
     display: flex;
@@ -215,16 +215,19 @@ body{
 }
 
 .proyec{
-    background-color: #111111;
+    background: linear-gradient(rgba(0, 0, 0, 0.61), rgba(70, 70, 70, 0.315));
+    background-position: center;
+    background-size: cover;
     padding: 20px;
     text-align:end;
+    border: 1px solid #ffffff;
     border-radius: 20px;
-    transition: transform 0.3s
-
+    transition: transform 0.3s;
+    overflow: hidden;  
 }
 
 .proyec:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 0.5s;
 }
 
@@ -248,13 +251,101 @@ body{
 
 
 .textos{
-    opacity: 0;
+    overflow: hidden;  
+    opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
 
 .textos:hover{
-    opacity: 1;
+    opacity: 0;
 }
+
+.textos h1{
+    color: #0fd30f;
+}
+
+.ac{
+    background: linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.836)), url(imagenes/proyec-1.png);
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+.ac:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.041)), url(imagenes/proyec-1.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.bc{
+    background: linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.836)), url(imagenes/proyec-2.png);
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.bc:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.041)), url(imagenes/proyec-2.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.cc{
+    background:linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.836)), url(imagenes/proyec-3.png);
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.cc:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.041)), url(imagenes/proyec-3.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.dc{
+    background: linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.836)), url(imagenes/proyec-4.png);
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.dc:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.041)), url(imagenes/proyec-4.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.ec{
+    background: linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.836)), url(imagenes/proyec-5.png);
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.ec:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.041)), url(imagenes/proyec-5.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.fc{
+    background:linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.836)), url(imagenes/proyec-6.png);
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.fc:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.041)), url(imagenes/proyec-6.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
 
 /*sitema solar*/
 #skills{
