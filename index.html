@@ -63,54 +63,54 @@
 
     <section id="proyectos" class="section">
 
-        <div class="mosaic-container">
+        <div class="carousel" aria-label="Carrusel simple">
+          <div class="track">
 
-            <div class="proyec ac" onclick="window.location.href='https://www.youtube.com/';" style="grid-area: box-1; cursor: pointer;">
-                <div class="textos">
-                    <h1>proyecto 1c</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi ab laboriosam, voluptas error assumenda repellendus quis facere consequatur impedit nemo tenetur laborum porro unde delectus culpa commodi nulla, aliquid similique?</p>
+
+            <div class="slide s1">
+                <div class="ventana-prr ss1">
+                    <div class="heder-btn"></div>
                 </div>
+                <div class="infor"></div>
             </div>
 
-            <div class="proyec bc" style="grid-area: box-2;">
-                <div class="textos">
 
-                    <h1>proyecto 2</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi ab laboriosam, voluptas error assumenda repellendus quis facere consequatur impedit nemo tenetur laborum porro unde delectus culpa commodi nulla, aliquid similique?</p>
-                </div>
-            </div>
 
-            <div class="proyec cc" style="grid-area: box-3;">
-                <div class="textos">
-                    <h1>proyecto 3</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi ab laboriosam, voluptas error assumenda repellendus quis facere consequatur impedit nemo tenetur laborum porro unde delectus culpa commodi nulla, aliquid similique?</p>
-                </div>
-            </div>
-
-            <div class="proyec dc" style="grid-area: box-4;">
-                    <div class="textos">
-    
-                        <h1>proyecto 4</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi ab laboriosam, voluptas error assumenda repellendus quis facere consequatur impedit nemo tenetur laborum porro unde delectus culpa commodi nulla, aliquid similique?</p>
+            <div class="slide s2">
+                <div class="ventana-prr ss2">
+                    <div class="heder-btn">
+                        <div class="minimize"></div>
+                        <div class="maximize"></div>
+                        <div class="close"></div>
                     </div>
-            </div>
-
-            <div class="proyec ec" style="grid-area: box-5;">
-                <div class="textos">
-
-                    <h1>proyecto 5</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi ab laboriosam, voluptas error assumenda repellendus quis facere consequatur impedit nemo tenetur laborum porro unde delectus culpa commodi nulla, aliquid similique?</p>
                 </div>
+                <div class="infor"></div>
             </div>
 
-            <div class="proyec fc" style="grid-area: box-6;">
-                <div class="textos">
 
-                    <h1>proyecto 6</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi ab laboriosam, voluptas error assumenda repellendus quis facere consequatur impedit nemo tenetur laborum porro unde delectus culpa commodi nulla, aliquid similique?</p>
+
+            <div class="slide s3">
+                <div class="ventana-prr ss3">
+                    <div class="heder-btn"></div>
                 </div>
+                <div class="infor"></div>
             </div>
 
+
+
+            <div class="slide s4">
+                <div class="ventana-prr ss4">
+                    <div class="heder-btn"></div>
+                </div>
+                <div class="infor"></div>
+            </div>
+
+
+
+          </div>
+
+          <button class="prev" aria-label="Anterior">&larr;</button>
+          <button class="next" aria-label="Siguiente">&rarr;</button>
         </div>
 
     </section>
@@ -121,8 +121,9 @@
 
     <section id="skills" class="section">
         
-            <div class="sistema-solar">
-               <div class="sol">HABILIDADES</div>
+            <div class="sistema-solar" id="sistema-solar">
+               <div class="sol" id="sol-btn">HABILIDADES</div>
+               <button class="close-btn" id="close-btn">x</button>
 
                <div class="orbita orbita-interna">
                    <div class="planeta planeta-verde"><img src="imagenes/gpt.png" alt=""></div>
@@ -130,7 +131,12 @@
                    <div class="planeta linux"><img src="imagenes/linux.jpeg" alt=""></div>
 
                 </div>
-                
+
+                <div class="info-container" id="info-container">
+                    
+                </div>
+
+
                 <div class="orbita-1 orbita-interna-1">
                    <div class="planeta html"><img src="imagenes/html.png" alt=""></div>
                    <div class="planeta css"><img src="imagenes/css.png" alt=""></div>
@@ -139,6 +145,8 @@
                </div>
 
             </div>
+
+            
 
     </section>
 

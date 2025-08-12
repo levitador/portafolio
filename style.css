@@ -204,32 +204,6 @@ body{
     align-items: center;
 }
 
-.mosaic-container{
-    display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-template-rows: 200px 200px;
-    gap: 2rem;
-    grid-template-areas: 
-    "box-1 box-2 box-2 box-3"
-    "box-1 box-4 box-5 box-6";
-}
-
-.proyec{
-    background: linear-gradient(rgba(0, 0, 0, 0.61), rgba(70, 70, 70, 0.315));
-    background-position: center;
-    background-size: cover;
-    padding: 20px;
-    text-align:end;
-    border: 1px solid #ffffff;
-    border-radius: 20px;
-    transition: transform 0.3s;
-    overflow: hidden;  
-}
-
-.proyec:hover{
-    transform: scale(1.1);
-    transition: 0.5s;
-}
 
 .section {
     opacity: 0;
@@ -249,102 +223,81 @@ body{
     z-index: 1;
 }
 
+.carousel { 
+    position:relative; 
+    width:100%; 
+    height:100%;
+    margin:40px auto; 
+    display: flex;
+    align-items: center;
+    overflow:hidden; }
 
-.textos{
-    overflow: hidden;  
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+
+.track { 
+    display:flex; 
+    transition:transform .35s ease; 
+    width: 100%;
+    height: 100%;
+}
+    
+
+.slide { 
+    min-width:100%; 
+    width: 2000px;
+    height:100%; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+    font-size:1.25rem; 
+    color:white; }
+
+.ventana-prr {
+    height: 460px;
+    width: 700px;
+    border: 2px solid #fff;
+    position: relative;
 }
 
-.textos:hover{
-    opacity: 0;
+.heder-btn {
+    height: 30px;
+    width: 100%;
+    border: 1px solid #fff;
 }
 
-.textos h1{
-    color: #0fd30f;
+.minimize{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    
 }
 
-.ac{
-    background: linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.836)), url(imagenes/proyec-1.png);
-    background-position: center;
-    background-size: cover;
-    transition: 0.5s;
-}
-.ac:hover{
-    background: linear-gradient(rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.041)), url(imagenes/proyec-1.png);
-    background-position: center;
-    background-size: cover;
+.maximize{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
 }
 
-.bc{
-    background: linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.836)), url(imagenes/proyec-2.png);
-    background-position: center;
-    background-size: cover;
-    transition: 0.5s;
+.close{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
 }
 
-.bc:hover{
-    background: linear-gradient(rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.041)), url(imagenes/proyec-2.png);
-    background-position: center;
-    background-size: cover;
-}
+button { 
+    position:absolute; 
+    top:50%; 
+    transform:translateY(-50%); 
+    border:0; 
+    background:rgba(0,0,0,.35); 
+    color:white; 
+    padding:10px; 
+    cursor:pointer; }
+
+.prev{ left:8px } 
+.next{ right:8px }
 
 
-.cc{
-    background:linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.836)), url(imagenes/proyec-3.png);
-    background-position: center;
-    background-size: cover;
-    transition: 0.5s;
-}
-
-.cc:hover{
-    background: linear-gradient(rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.041)), url(imagenes/proyec-3.png);
-    background-position: center;
-    background-size: cover;
-}
-
-
-.dc{
-    background: linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.836)), url(imagenes/proyec-4.png);
-    background-position: center;
-    background-size: cover;
-    transition: 0.5s;
-}
-
-.dc:hover{
-    background: linear-gradient(rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.041)), url(imagenes/proyec-4.png);
-    background-position: center;
-    background-size: cover;
-}
-
-
-.ec{
-    background: linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.836)), url(imagenes/proyec-5.png);
-    background-position: center;
-    background-size: cover;
-    transition: 0.5s;
-}
-
-.ec:hover{
-    background: linear-gradient(rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.041)), url(imagenes/proyec-5.png);
-    background-position: center;
-    background-size: cover;
-}
-
-
-.fc{
-    background:linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.836)), url(imagenes/proyec-6.png);
-    background-position: center;
-    background-size: cover;
-    transition: 0.5s;
-}
-
-.fc:hover{
-    background: linear-gradient(rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.041)), url(imagenes/proyec-6.png);
-    background-position: center;
-    background-size: cover;
-}
-
+ button:focus{ outline:2px solid #fff }
 
 
 /*sitema solar*/
@@ -364,23 +317,31 @@ body{
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    transition: all 1.5s (0.25, 0.46, 0.45, 0.94);
 }
 
 /* El Sol - Círculo blanco central */
 .sol {
     position: absolute;
-    width: 100px; /* Tamaño del sol */
+    width: 100px; 
     height: 100px;
     background-color: #fff;
     align-items: center;
+    cursor: pointer;
     justify-content: center;
     color: #000000;
     font-weight: bold;
     display: flex;
+    visibility: visible;
     font-size: 14px;
     border-radius: 50%;
     z-index: 10;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sutil brillo */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: all 2s ease;
+}
+
+.sol:hover {
+    transform: scale(1.1);
 }
 
 /* Definición de la animación de órbita */
@@ -401,14 +362,16 @@ body{
     display: flex; 
     justify-content: center;
     align-items: center;
-
+    visibility: visible;
 }
 
 
 .orbita-interna {
     width: 500px;
     height: 500px;
+    visibility: visible;
     animation: orbita 30s linear infinite;
+    transition: all 1s ease;
 }
 
 .planeta {
@@ -494,6 +457,8 @@ body{
     background-color: rgb(255, 255, 255);
     transform: translate(100px, -100px); 
 }
+
+
 
 /*CONTACTO*/
 #contact {
