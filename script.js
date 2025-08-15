@@ -62,3 +62,23 @@ const track = document.querySelector('.track');
     if (e.key === 'ArrowLeft') prev.click();
     if (e.key === 'ArrowRight') next.click();
   });
+
+  
+
+
+
+  function sendWhatsapp() {
+    let nombre = document.getElementById("nombre").value.trim();
+    let correo = document.getElementById("correo").value.trim();
+    let mensaje = document.getElementById("mensaje").value.trim();
+
+    if (!nombre || !correo || !mensaje) {
+        alert("Por favor, completa todos los campos.");
+        return;
+    }
+
+    let telefono = "50372760109"; // número en formato internacional
+    let url = `https://wa.me/${telefono}?text=${encodeURIComponent(`Hola, soy ${nombre} (${correo})\n${mensaje}`)}`;
+
+    window.open(url, "_blank");
+}
