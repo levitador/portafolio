@@ -272,7 +272,7 @@ body{
 }
 
 .ventana-prr:hover{
-    width: 900px;
+    width: 1000px;
 }
 
 .ventana-prr:hover::before {
@@ -653,9 +653,19 @@ button {
     /*telefono*/
 
 @media (max-width: 768px) {
+    
     body{
-        overflow:scroll;
+        overflow: auto;
+        padding-bottom: 80px; /* para no tapar el navbar */
+    
     }
+
+    .navbar{
+        opacity: 0;
+        display: none;
+        width: 1px;
+    }
+
 
     .section{
         opacity: 1;
@@ -667,28 +677,193 @@ button {
         width: 100%;
     }
 
-    .hero{
-        flex-direction: column;
-        align-items: center;
-        display: flex;
-        height: 140vh;
-        width: 100%;
+    .hero {
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.image-container{
+    width: 300px;
+    height: 300px;
+}
+
+
+    .ventana-prr {
+    width: 90%;       /* antes fijo 700px */
+    max-width: 700px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.ventana-prr:hover{
+    width: 100%;
+}
+
+
+    .ventana-prr a{
+        top: 5%;
+        left: 45%;
+        
+        font-size: 1.5rem; /* antes 3rem */
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .heder-btn{
+        position: absolute;
+        top: 0px;
+        right: 0px;
     }
 
     .texto{
-        width: 100%;
+        max-width: 100%;
         text-align: center;
+        font-size: 15px;
     }
 
     .texto h1{
-        font-size: 2.3rem;
+        font-size: 1.5rem;
     }
 
     .texto h1 br{
         display: none;
     }
 
-    .image-container{
-        margin: 50px;
+    .hero {
+    flex-direction: column;
+    padding: 2rem;
+    height: auto;
+    text-align: center;
+}
+
+#sobre-mi{
+    width: 100%;
+    background-image: url('imagenes/fin.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.image-container{
+    margin-top: 60px;
+}
+    .panel{
+        position: relative; /* referencia para el texto */
+        display: inline-block; 
     }
+    .panel img {
+        opacity: 0;
+        width: 100%;
+}
+
+    .text-left {
+  position: absolute;
+  top: 50%;       /* centrado vertical */
+  left: 50%;      /* centrado horizontal */
+  transform: translate(-50%, -50%); /* ajuste para que quede justo en el centro */
+  color: white;   /* color para contrastar */
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4); /* opcional: fondo semitransparente */
+  border-radius: 10px;
+  margin-right: 0px;
+}
+
+    .text-left p{
+        width: 300px;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    #proyectos {
+        height: 100vh;
+    }
+
+    .carousel button {
+        height: 50px;
+        position: absolute;
+        top: 94vh;
+        width: 140px;
+        background-color: #1111119c;
+    }
+
+    #skills {
+        height: 100vh;
+    }
+
+    .orbita-interna {
+        width: 350px;
+        height: 350px;
+    }
+
+    .claude {
+        transform: translate(-150px, 90px);
+    }
+
+
+    .planeta-verde {
+        transform: translate(150px, 90px);
+    }
+
+    .linux {
+        transform: translate(0px, -175px);
+    }
+
+    .orbita-interna-1 {
+    width: 250px; 
+    height: 250px;}
+
+    .html {
+        transform: translate(-90px, 80px);
+    }
+
+    .css {
+        transform: translate(90px, 80px);
+    }
+    .js {
+        transform: translate(-90px, -80px);
+    }
+    .git {
+        transform: translate(90px, -80px);
+    }
+
+    .planeta {
+        width: 35px;
+        height: 35px;
+    }
+
+    .planeta img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .cube {
+      width: 250px;
+      height: 250px;
+    }
+
+    .front  { transform: rotateY(  0deg) translateZ(125px); }
+    .back   { transform: rotateY(180deg) translateZ(125px); }
+    .right  { transform: rotateY( 90deg) translateZ(125px); }
+    .left   { transform: rotateY(-90deg) translateZ(125px); }
+    .top    { transform: rotateX( 90deg) translateZ(125px); }
+    .bottom { transform: rotateX(-90deg) translateZ(125px); }
+
+    #contact {
+        height: 60vh;
+    }
+
+    form {
+        padding: 0;
+        font-size: 15px;
+    }
+
+    form input {
+        height: 19px;
+        text-decoration: none;
+    }
+
+
 }
